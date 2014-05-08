@@ -19,9 +19,9 @@ select
     , sum((fate_runs_ct + event_runs_ct) * p.c31) / sum(p.c31)::float as re_31
     , sum((fate_runs_ct + event_runs_ct) * p.c32) / sum(p.c32)::float as re_32
 from
-    events e,
-    non_partial_non_home_half_ninth_plus_innings i,
-    pitchseq p
+    events e
+    , non_partial_non_home_half_ninth_plus_innings i
+    , pitchseq p
 where
     e.year_id between 2010 and 2013 
     and e.bat_event_fl = 'T'

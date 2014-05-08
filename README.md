@@ -12,6 +12,14 @@ This assumes that you've got:
 
 These queries were written for and run in PostgreSQL 9.3.
 
+## Contributing
+
+To contribute:
+
+1. Fork this repo
+2. Add your query
+3. Send a pull request with any notes pertinant to running the query
+
 ## Notes
 
 ### Innings
