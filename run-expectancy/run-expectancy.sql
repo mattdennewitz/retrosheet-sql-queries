@@ -4,8 +4,9 @@
 --   base-out state
 
 select
-    e.inn_ct
-    , e.start_bases_cd
+    e.inn_ct           -- current inning
+    , e.outs_ct        -- outs before this event
+    , e.start_bases_cd -- base-state at beginning of event
     , sum((fate_runs_ct + event_runs_ct) * p.c00) / sum(p.c00)::float as re_00
     , sum((fate_runs_ct + event_runs_ct) * p.c01) / sum(p.c01)::float as re_01
     , sum((fate_runs_ct + event_runs_ct) * p.c02) / sum(p.c02)::float as re_02
@@ -29,8 +30,9 @@ where
     and e.inn_ct = i.inn_ct 
     and e.bat_home_id = i.bat_home_id
     and e.pitch_seq_tx = p.pitch_seq_tx
-    and e.inn_ct::numeric <= 11
+    and e.inn_ct::numeric <= 9
 group by
     e.inn_ct
+    , e.outs_ct
     , e.start_bases_cd
 ;
