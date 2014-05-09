@@ -12,6 +12,16 @@ This assumes that you've got:
 
 These queries were written for and run in PostgreSQL 9.3.
 
+## Data coverage
+
+- [x] Innings
+- [ ] Base-out state
+- [ ] Counts
+- [x] Innings & Base-out state
+- [x] Innings & counts
+- [ ] Base-out state & counts
+- [x] Innings & bases & counts
+
 ## Contributing
 
 To contribute:
