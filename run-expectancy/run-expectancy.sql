@@ -30,7 +30,7 @@ where
     and e.inn_ct = i.inn_ct 
     and e.bat_home_id = i.bat_home_id
     and e.pitch_seq_tx = p.pitch_seq_tx
-    and e.inn_ct::numeric <= 9
+    and e.inn_ct <= 9
 group by
     e.inn_ct
     , e.outs_ct
