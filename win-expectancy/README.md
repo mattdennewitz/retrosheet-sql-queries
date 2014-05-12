@@ -8,3 +8,8 @@ This assumes that you've got:
   of Chadwick-parsed Retrosheet events and games
 
 Written for and run in PostgreSQL 9.3.
+
+## Other things to try
+
+Try grouping by ballpark to see which parks may amplify situations
+or otherwise introduce an advantage.
