@@ -31,7 +31,7 @@ from (
         , sum(case when event_cd = '22' then 1 else 0 end) as _3b
         , sum(case when event_cd = '23' then 1 else 0 end) as hr
         , sum(case when sf_fl = 'T' then 1 else 0 end) as sf
-        , sum(case when bat_safe_err_fl = 't' then 1 else 0 end) as rboe
+        , sum(case when bat_safe_err_fl = 'T' then 1 else 0 end) as rboe
     from
         events e
         , games g
