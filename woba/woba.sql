@@ -3,8 +3,8 @@
 -- woba formula via http://www.fangraphs.com/library/offense/woba/
 -- weights via http://www.fangraphs.com/guts.aspx
 -- 
--- note: fangraphs' "bb" column counts walks + intentional walks,
---       where retrosheet distinguishes.
+-- note: fangraphs' player page "bb" column combines intentional and unintentional walks,
+--       where retrosheet's event coding differentiates between the two.
 
 select
     s.*
